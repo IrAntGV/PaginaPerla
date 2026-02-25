@@ -1,56 +1,83 @@
-/* Contenedor principal para dar aire al diseño */
-.identity-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #242424;
+  /* Mantenemos el fondo de la marca */
 }
 
-/* Tarjetas modernas */
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.main-header h1 {
+  font-size: 3rem;
+  color: #646cff;
+  /* Color de acento */
+  margin-bottom: 10px;
+}
+
+/* Grid para Misión, Visión y Valores */
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Estilo de las Tarjetas */
 .card {
   background-color: #1a1a1a;
-  /* Un gris ligeramente más claro que el fondo de root */
-  border-radius: 12px;
   border: 1px solid #333;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 30px;
   transition: transform 0.3s ease, border-color 0.3s ease;
-  text-align: left;
-  /* Mejor para lectura de textos largos como la Misión */
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   border-color: #646cff;
-  /* Usamos tu color de acento definido en index.css */
 }
 
-.card h2 {
-  color: #646cff;
-  margin-top: 0;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #333;
-  padding-bottom: 0.5rem;
-}
-
-/* Estilo de la lista de valores sin los puntos (•) */
-.values-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* Los valores en dos columnas para ahorrar espacio */
-  gap: 10px;
-}
-
+/* Lista de Valores */
 .values-list li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.95rem;
 }
 
-.icon-value {
+/* Color del Icono */
+.icon-green {
   color: #4ade80;
-  /* Un verde suave que evite el sodio y evoque salud */
+  /* Verde salud */
   flex-shrink: 0;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sección de Publicidad */
+.product-ads {
+  margin-top: 50px;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+}
+
+.placeholder-card {
+  background: #1a1a1a;
+  border: 2px dashed #444;
+  /* El borde punteado indica que es un espacio pendiente */
+  border-radius: 12px;
+  padding: 60px;
+  text-align: center;
+  color: #888;
 }

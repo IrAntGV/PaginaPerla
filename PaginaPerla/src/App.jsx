@@ -15,20 +15,23 @@ function App() {
     "Flexibilidad", "Respeto"];
 
   const productos = [
-    { id: 1, nombre: "Sazonador para Pollo", img: polloImg, tag: "800x533" },
-    { id: 2, nombre: "Kit de Sabores", img: trioImg, tag: "800x800" },
+    { id: 1, nombre: "Sazona Tu Vida", img: polloImg, tag: "800x533" },
+    { id: 2, nombre: "Diferentes", img: trioImg, tag: "800x800" },
     { id: 3, nombre: "Calidad Natural", img: manoImg, tag: "800x800" },
-    { id: 4, nombre: "Caja de Sazonadores", img: cajaImg, tag: "800x533" }
+    { id: 4, nombre: "Todos", img: cajaImg, tag: "800x533" }
   ];
 
   return (
     <div className="container">
-      {/* Sección Hero con la imagen de 800x533 */}
+      {/* Título principal centrado en la parte superior */}
+      <header className="main-header">
+        <h1 className="brand-title">EL SABOR DE LA VIDA</h1>
+      </header>
+
+      {/* Sección Hero */}
       <section className="hero-banner">
         <img src={heroImg} alt="Hero El Sabor de la Vida" className="hero-img" />
         <div className="hero-text">
-          <h1>EL SABOR DE LA VIDA</h1>
-          <p>Alternativas naturales para tu salud renal.</p>
         </div>
       </section>
 
@@ -59,15 +62,20 @@ function App() {
           </ul>
         </article>
       </div>
-
-      {/* Galería de Productos con mezcla de tamaños */}
+      {/* Sección de Productos Actualizada */}
       <section className="product-section">
-        <h2 className="section-title">Nuestra Galería</h2>
+        {/* Título centrado y actualizado */}
+        <h2 className="section-title centered-title">Nuestros Productos</h2>
         <div className="product-grid">
           {productos.map((prod) => (
             <div key={prod.id} className="product-card">
               <div className="image-wrapper">
-                <img src={prod.img} alt={prod.nombre} className="product-thumb" />
+                <img
+                  src={prod.img}
+                  alt={prod.nombre}
+                  className="product-thumb"
+                  loading="lazy"
+                />
               </div>
               <div className="product-info">
                 <h3>{prod.nombre}</h3>
@@ -76,6 +84,19 @@ function App() {
           ))}
         </div>
       </section>
+      <footer className="main-footer">
+        <div className="footer-content">
+          <p>© 2026 EL SABOR DE LA VIDA</p>
+          <a
+            href="https://www.facebook.com/share/p/1Dsmq3KJvd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="facebook-button"
+          >
+            SÍGUENOS EN FACEBOOK
+          </a>
+        </div>
+      </footer>
     </div>
   )
 }

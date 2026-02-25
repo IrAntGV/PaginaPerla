@@ -7,6 +7,42 @@
   /* Mantenemos el fondo de la marca */
 }
 
+.main-header {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  text-align: center;
+}
+
+.brand-title {
+  font-size: 3rem;
+  /* Un poco más grande para que destaque como centro */
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  /* Espaciado elegante */
+
+  /* Detalle puntiagudo: líneas a ambos lados */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand-title::before,
+.brand-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #646cff;
+  /* Tu color de acento */
+  display: inline-block;
+}
+
 /* Contenedor principal */
 .container {
   max-width: 1100px;
@@ -34,12 +70,35 @@
 .card {
   background-color: #1a1a1a;
   border: 1px solid #333;
-  border-radius: 16px;
+  border-radius: 24px;
+  /* Estilo puntiagudo solicitado */
+  padding: 30px;
+  /* Añadimos padding para que el texto no toque los bordes */
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* Transición más orgánica */
-  /* Sombra base: Muy sutil para dar volumen */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  /* Centrado de contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #ffffff;
+  border-bottom: 2px solid #646cff;
+  /* Subrayado elegante para el título */
+  padding-bottom: 10px;
+  width: fit-content;
+  /* Para que el borde solo ocupe el ancho del texto */
+  margin-bottom: 15px;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #ccc;
 }
 
 .card:hover {
@@ -84,15 +143,6 @@
   margin-bottom: 30px;
 }
 
-.placeholder-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px dashed #444;
-  /* Estilo 'en construcción' */
-  border-radius: 20px;
-  padding: 80px 20px;
-  color: #888;
-}
-
 .placeholder-card p {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -106,18 +156,47 @@
 /* Banner Principal (Hero) */
 .hero-banner {
   width: 100%;
-  height: 350px;
-  border-radius: 20px;
+  height: auto;
+  /* Permite que la altura se adapte a la imagen */
+  min-height: 400px;
+  border-radius: 64px;
   overflow: hidden;
   position: relative;
   margin-bottom: 40px;
+  background-color: #1a1a1a;
 }
 
 .hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  /* Ajusta la de 800x533 perfectamente */
+  object-fit: contain;
+  /* Muestra la imagen COMPLETA de 800x533 sin recortar */
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #646cff;
+  font-weight: 500;
 }
 
 /* Contenedor de imagen en la galería */
@@ -146,4 +225,41 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
+}
+
+/* Estilos del Footer y Botón de Facebook */
+.main-footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.facebook-button {
+  background-color: transparent;
+  color: #646cff;
+  /* Tu color de acento actual */
+  border: 2px solid #646cff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+
+  /* Estilo puntiagudo obligatorio */
+  border-radius: 0px;
+}
+
+.facebook-button:hover {
+  background-color: #646cff;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(100, 108, 255, 0.4);
+  transform: translateY(-3px);
 }

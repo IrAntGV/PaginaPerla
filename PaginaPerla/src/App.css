@@ -1,10 +1,14 @@
 #root {
   width: 100%;
   min-height: 100vh;
+  /* Asegura que el fondo cubra toda la pantalla */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* Cambia a column para que el header esté arriba y el contenido abajo */
+  align-items: center;
+  /* Centra todo el contenido horizontalmente */
   background-color: #242424;
-  /* Mantenemos el fondo de la marca */
+  /* El color que ya tienes */
 }
 
 .main-header {
@@ -15,6 +19,15 @@
   justify-content: center;
   /* Centra el contenido horizontalmente */
   text-align: center;
+}
+
+/* Título de Productos Centrado */
+.centered-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #646cff;
+  /* O el color azul que estás usando */
 }
 
 .brand-title {
@@ -156,14 +169,12 @@
 /* Banner Principal (Hero) */
 .hero-banner {
   width: 100%;
-  height: auto;
-  /* Permite que la altura se adapte a la imagen */
-  min-height: 400px;
-  border-radius: 64px;
+  height: 350px;
+  border-radius: 24px;
+  /* Consistente con las tarjetas */
   overflow: hidden;
   position: relative;
   margin-bottom: 40px;
-  background-color: #1a1a1a;
 }
 
 .hero-img {

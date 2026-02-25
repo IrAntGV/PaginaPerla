@@ -1,42 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Contenedor principal para dar aire al diseño */
+.identity-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Tarjetas modernas */
 .card {
-  padding: 2em;
+  background-color: #1a1a1a;
+  /* Un gris ligeramente más claro que el fondo de root */
+  border-radius: 12px;
+  border: 1px solid #333;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+  /* Mejor para lectura de textos largos como la Misión */
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #646cff;
+  /* Usamos tu color de acento definido en index.css */
+}
+
+.card h2 {
+  color: #646cff;
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+/* Estilo de la lista de valores sin los puntos (•) */
+.values-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Los valores en dos columnas para ahorrar espacio */
+  gap: 10px;
+}
+
+.values-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.icon-value {
+  color: #4ade80;
+  /* Un verde suave que evite el sodio y evoque salud */
+  flex-shrink: 0;
 }

@@ -1,187 +1,53 @@
+/* 1. Base y Fondo Global */
 #root {
   width: 100%;
   min-height: 100vh;
-  /* Asegura que el fondo cubra toda la pantalla */
-  display: flex;
-  flex-direction: column;
-  /* Cambia a column para que el header esté arriba y el contenido abajo */
-  align-items: center;
-  /* Centra todo el contenido horizontalmente */
-  background-color: #242424;
-  /* El color que ya tienes */
-}
-
-.main-header {
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  /* Centra el contenido horizontalmente */
-  text-align: center;
+  background-color: #ffdf9f;
+  /* Color oscuro de la marca */
 }
 
-/* Título de Productos Centrado */
-.centered-title {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 40px;
-  color: #646cff;
-  /* O el color azul que estás usando */
-}
-
-.brand-title {
-  font-size: 3rem;
-  /* Un poco más grande para que destaque como centro */
-  font-weight: 900;
-  color: #ffffff;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  /* Espaciado elegante */
-
-  /* Detalle puntiagudo: líneas a ambos lados */
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.brand-title::before,
-.brand-title::after {
-  content: "";
-  width: 50px;
-  height: 4px;
-  background-color: #646cff;
-  /* Tu color de acento */
-  display: inline-block;
-}
-
-/* Contenedor principal */
 .container {
   max-width: 1100px;
-  width: 90%;
-  margin: 40px auto;
+  width: 95%;
+  margin: 0 auto;
   padding: 20px;
   color: #ffffff;
 }
 
-.main-header h1 {
-  font-size: 3rem;
-  color: #646cff;
-  /* Color de acento */
-  margin-bottom: 10px;
-}
-
-/* Grid para Misión, Visión y Valores */
-.identity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-}
-
-/* Estilo de las Tarjetas */
-.card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 24px;
-  /* Estilo puntiagudo solicitado */
-  padding: 30px;
-  /* Añadimos padding para que el texto no toque los bordes */
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-
-  /* Centrado de contenido */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 2. Encabezado Principal Centrado */
+.main-header {
   text-align: center;
-}
-
-.card h2 {
-  margin-top: 0;
-  color: #ffffff;
-  border-bottom: 2px solid #646cff;
-  /* Subrayado elegante para el título */
-  padding-bottom: 10px;
-  width: fit-content;
-  /* Para que el borde solo ocupe el ancho del texto */
-  margin-bottom: 15px;
-}
-
-.card p {
-  line-height: 1.6;
-  color: #ccc;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  border-color: #646cff;
-  /* Sombra de elevación: Más difusa y con un toque del color de tu marca */
-  box-shadow: 0 15px 30px rgba(100, 108, 255, 0.2);
-}
-
-/* Lista de Valores */
-.values-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Color del Icono */
-.icon-green {
-  color: #4ade80;
-  /* Verde salud */
-  flex-shrink: 0;
-}
-
-/* Responsividad para móviles */
-@media (max-width: 600px) {
-  .values-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Sección de Publicidad */
-.product-ads {
-  margin-top: 50px;
   padding: 40px 0;
-  border-top: 1px solid #333;
-  text-align: center;
+  color: #0d6402;
 }
 
-.section-title {
-  font-size: 2rem;
-  color: #646cff;
-  margin-bottom: 30px;
+.main-header h1 {
+  font-size: 3.5rem;
+  color: #0d6402;
+  margin: 0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.placeholder-card p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.placeholder-card span {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-/* Banner Principal (Hero) */
+/* 3. Hero Banner (Optimizado para 800x533) */
 .hero-banner {
   width: 100%;
-  height: 350px;
+  height: auto;
   border-radius: 24px;
-  /* Consistente con las tarjetas */
+  /* Bordes redondeados que decidiste mantener */
   overflow: hidden;
   position: relative;
   margin-bottom: 40px;
+  border: 1px solid #333;
 }
 
 .hero-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Muestra la imagen COMPLETA de 800x533 sin recortar */
+  /* Muestra la imagen completa sin recortes */
   display: block;
 }
 
@@ -190,87 +56,168 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   text-align: left;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .hero-text p {
-  font-size: 1.2rem;
-  margin: 0;
   color: #646cff;
-  font-weight: 500;
+  /* Color de acento azul */
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-/* Contenedor de imagen en la galería */
+/* 4. Grid de Identidad (Misión, Visión, Valores) */
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #516d25;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #000000;
+  text-align: justify;
+  /* Crea el bloque de texto limpio y recto a los lados */
+  text-align-last: center;
+  /* Centra la última línea para mantener la simetría con el título */
+  hyphens: auto;
+  /* Evita huecos grandes entre palabras */
+  margin: 0;
+}
+
+.centered-card {
+  text-align: center;
+  color: #000000;
+  /* Centra el texto de Misión y Visión */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #0d6402;
+}
+
+/* 5. Lista de Valores */
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.values-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-green {
+  color: #4ade80;
+  /* Verde salud */
+}
+
+/* 6. Sección de Productos (Grid) */
+.centered-title {
+  text-align: center;
+  /* Título "Nuestros Productos" centrado */
+  margin: 60px 0 30px;
+  font-size: 2.5rem;
+  color: #0d6402;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  border-color: #0d6402;
+}
+
 .image-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
   /* Forzamos forma cuadrada visual */
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
+  border-radius: 16px;
+  margin-bottom: 15px;
 }
 
 .product-thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Aquí sucede la magia: unifica las de 533 y 800 de alto */
-  transition: transform 0.5s ease;
 }
 
-.product-card:hover .product-thumb {
-  transform: scale(1.1);
-  /* Efecto de zoom elegante */
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-/* Estilos del Footer y Botón de Facebook */
+/* 7. Pie de Página (Facebook) */
 .main-footer {
-  margin-top: 60px;
-  padding: 40px 0;
+  margin-top: 80px;
+  padding: 40px;
   border-top: 1px solid #333;
   text-align: center;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
 .facebook-button {
-  background-color: transparent;
-  color: #646cff;
-  /* Tu color de acento actual */
-  border: 2px solid #646cff;
-  padding: 12px 30px;
+  border: 2px solid #121efa;
+  color: #121efa;
+  padding: 12px 35px;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 2px;
-  transition: all 0.3s ease;
-
-  /* Estilo puntiagudo obligatorio */
-  border-radius: 0px;
+  transition: 0.3s;
+  border-radius: 8px;
 }
 
 .facebook-button:hover {
-  background-color: #646cff;
+  background: #646cff;
+  color: #000000;
+}
+
+/* Centrar los títulos de Misión, Visión y Valores */
+.card h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
   color: #ffffff;
-  box-shadow: 0 0 20px rgba(100, 108, 255, 0.4);
-  transform: translateY(-3px);
+  /* Opcional: una línea abajo centrada para estilo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #f51818;
+  margin-top: 8px;
+}
+
+/* Asegurar que la lista de valores también se vea bien alineada */
+.values-list {
+  display: inline-block;
+  /* Permite que el bloque se comporte mejor si la tarjeta se centra */
+  text-align: left;
+  margin: 0 auto;
 }

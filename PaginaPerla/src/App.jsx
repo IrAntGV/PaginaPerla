@@ -53,7 +53,7 @@ function App() {
             fósforo y potasio encuentre en nosotros la inspiración y el sabor necesarios para una vida saludable.
           </p>
         </article>
-        <article className="card">
+        <article className="card centered-card">
           <h2>Valores</h2>
           <ul className="values-list">
             {valores.map((v, i) => (
@@ -86,7 +86,7 @@ function App() {
       </section>
       <footer className="main-footer">
         <div className="footer-content">
-          <p>© 2026 EL SABOR DE LA VIDA</p>
+          <p style={{ color: "#000000" }}>© 2026 EL SABOR DE LA VIDA</p>
           <a
             href="https://www.facebook.com/share/p/1Dsmq3KJvd/"
             target="_blank"

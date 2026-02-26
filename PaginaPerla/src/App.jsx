@@ -14,6 +14,7 @@ function App() {
     "Trabajo en equipo", "Calidad", "Empatía",
     "Flexibilidad", "Respeto"];
 
+  const facebookLink = "https://www.facebook.com/share/1AwsRxhCY8/?mibextid=wwXIfr";
   const productos = [
     { id: 1, nombre: "Sazona Tu Vida", img: polloImg, tag: "800x533" },
     { id: 2, nombre: "Diferentes", img: trioImg, tag: "800x800" },
@@ -88,7 +89,7 @@ function App() {
         <div className="footer-content">
           <p style={{ color: "#000000" }}>© 2026 EL SABOR DE LA VIDA</p>
           <a
-            href="https://www.facebook.com/share/p/1Dsmq3KJvd/"
+            href={facebookLink}
             target="_blank"
             rel="noopener noreferrer"
             className="facebook-button"

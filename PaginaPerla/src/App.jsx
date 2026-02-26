@@ -14,7 +14,7 @@ function App() {
     "Trabajo en equipo", "Calidad", "Empatía",
     "Flexibilidad", "Respeto"];
 
-  const facebookLink = "https://www.facebook.com/share/1AwsRxhCY8/?mibextid=wwXIfr";
+  const facebookLink = "https://www.facebook.com/share/17hxb1EXfc/?mibextid=wwXIfr";
   const productos = [
     { id: 1, nombre: "Sazona Tu Vida", img: polloImg, tag: "800x533" },
     { id: 2, nombre: "Diferentes", img: trioImg, tag: "800x800" },
